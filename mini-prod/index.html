@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SparcStart responsive embed test page</title>
+
+    <!-- 1) ADD THESE 2 TAGS TO THE PAGE WHERE YOU WANT TO DISPLAY THE MINISPARC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<LINK href="https://secure.sparcstart.com/content/css/minisparc.css" rel="stylesheet" type="text/css">-->
+    <!-- END MINISPARC -->
+
+
+    <style media="screen" type="text/css">
+        body {
+            background-color: #FFF;
+            margin: 24px;
+        }
+
+        @media screen and (max-width: 375px) {
+
+            body {
+                margin: 0px;
+            }
+        }
+
+        #main-content-area {
+            max-width: 800px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="main-content-area">
+        <h1>Job post title</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+        
+         <div class="sparcembed" data-position="22342" data-account="Akron"></div>
+
+        <!-- END MINISPARC -->
+
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+    </div>
+    <button id="printButton">Print PDF</button>
+    <script src="https://secure.sparcstart.com/scripts/embed/embed-jquery.js"></script>
+    <script>
+        // Get a reference to your button
+        var printButton = document.getElementById('printButton');
+
+        // Add a click event listener to the button
+        printButton.addEventListener('click', function () {
+            // Specify the URL of the PDF file you want to print
+            var pdfUrl = 'https://sparctstart-ui-test.s3.us-west-2.amazonaws.com/77/Document/83a6b6a7-f34a-4d29-a0d9-ce31d864e481.doc?X-Amz-Expires=36000&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJ6YQABVN2QGJNJOA/20230921/us-west-2/s3/aws4_request&X-Amz-Date=20230921T085604Z&X-Amz-SignedHeaders=host&X-Amz-Signature=3c647923d15d631c0eee08693a434dbe6709fb97bb64d32a249ca9eb75a53bdc';
+
+            // Open the PDF in a new tab/window
+            window.open(pdfUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
